@@ -24,6 +24,8 @@ explore: billion_orders {
   }
 }
 
+explore: ipdt_test {}
+
 explore: connection_reg_r3 {}
 
 explore: day_of_week {}
