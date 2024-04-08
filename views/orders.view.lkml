@@ -16,6 +16,12 @@ view: orders {
     type: string
     sql: ${TABLE}.status ;;
   }
+
+  # measure: max_date {
+  #   type: max
+
+  #   sql: CONVERT((${created_date}), DATE) ;;
+  # }
   dimension: user_id {
     type: number
     # hidden: yes
@@ -29,18 +35,18 @@ view: orders {
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
-	id,
-	users.id,
-	users.first_name,
-	users.last_name,
-	billion_orders.count,
-	fakeorders.count,
-	hundred_million_orders.count,
-	hundred_million_orders_wide.count,
-	order_items.count,
-	order_items_vijaya.count,
-	ten_million_orders.count
-	]
+  id,
+  users.id,
+  users.first_name,
+  users.last_name,
+  billion_orders.count,
+  fakeorders.count,
+  hundred_million_orders.count,
+  hundred_million_orders_wide.count,
+  order_items.count,
+  order_items_vijaya.count,
+  ten_million_orders.count
+  ]
   }
 
 }
