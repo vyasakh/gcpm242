@@ -16,6 +16,12 @@ view: orders {
     type: string
     sql: ${TABLE}.status ;;
   }
+
+  # measure: max_date {
+  #   type: max
+
+  #   sql: CONVERT((${created_date}), DATE) ;;
+  # }
   dimension: user_id {
     type: number
     # hidden: yes
